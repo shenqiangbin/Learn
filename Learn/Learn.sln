@@ -3,8 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T4Demo01", "T4Demo01\T4Demo01.csproj", "{CEA9CB28-ACEB-425C-AC50-89322AEF9323}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "T4", "T4", "{A666044F-6F30-40AE-A64C-168335FE51A7}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CEA9CB28-ACEB-425C-AC50-89322AEF9323}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEA9CB28-ACEB-425C-AC50-89322AEF9323}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEA9CB28-ACEB-425C-AC50-89322AEF9323}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEA9CB28-ACEB-425C-AC50-89322AEF9323}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CEA9CB28-ACEB-425C-AC50-89322AEF9323} = {A666044F-6F30-40AE-A64C-168335FE51A7}
 	EndGlobalSection
 EndGlobal
