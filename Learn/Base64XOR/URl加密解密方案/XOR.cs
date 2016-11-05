@@ -17,7 +17,7 @@ namespace Utility
         /// <param name="l">左侧的byte数组</param>
         /// <param name="r">右侧的byte数组</param>
         /// <returns>运算结果</returns>
-        public static byte[] XOR(byte[] l, byte[] r)
+        public static byte[] Run(byte[] l, byte[] r)
         {
             if (l == null || r == null) throw new ArgumentNullException();
 
@@ -27,7 +27,7 @@ namespace Utility
             {
                 int index = i % r.Length;
 
-                arr[i] = XOR(l[i], r[index]);
+                arr[i] = Run(l[i], r[index]);
             }
 
             return arr;
@@ -39,7 +39,7 @@ namespace Utility
         /// <param name="l">左侧byte</param>
         /// <param name="r">右侧byte</param>
         /// <returns>运算结果</returns>
-        public static byte XOR(byte l, byte r)
+        public static byte Run(byte l, byte r)
         {
             return (byte)(l ^ r);
         }
