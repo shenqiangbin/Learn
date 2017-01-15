@@ -71,10 +71,13 @@ namespace ConfigLib
         /// <returns></returns>
         public static T DeserializeJsonFromFile<T>(string filePath) where T : class
         {
-            JsonSerializer serializer = new JsonSerializer();
-            StreamReader sw = new StreamReader(filePath);
-            JsonReader jsonReader = new JsonTextReader(sw);
-            return serializer.Deserialize<T>(jsonReader);
+            using (StreamReader sw = new StreamReader(filePath))
+            {
+                JsonSerializer serializer = new JsonSerializer();                
+                JsonReader jsonReader = new JsonTextReader(sw);
+                return serializer.Deserialize<T>(jsonReader);
+            }
+            
         }
     }
 

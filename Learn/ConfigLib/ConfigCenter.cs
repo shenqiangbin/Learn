@@ -12,6 +12,8 @@ namespace ConfigLib
     /// 默认不是测试模式，且读取的是d盘下的website.json配置文件
     /// 可以自定义，需将configLib.config.json拷贝到引用configLib.dll的目录下（注意：是引用项目的目录）
     /// 当是测试模式时，将会寻找fake文件夹下的同名配置文件
+    /// 
+    /// 注意：MVC程序，ConfigLib.config.json文件是放在bin所有文件夹，而不是bin目录下。
     /// </summary>
     public class ConfigCenter
     {
@@ -27,8 +29,8 @@ namespace ConfigLib
         }
 
         private Config CreateConfig()
-        {
-            string path = @"ConfigLib.config.json";
+        {            
+            string path = AppDomain.CurrentDomain.SetupInformation.ApplicationBase + @"ConfigLib.config.json";            
             if (File.Exists(path))
                 return JsonHelper.DeserializeJsonFromFile<Config>(path);
             else
